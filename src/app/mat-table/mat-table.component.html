@@ -1,0 +1,16 @@
+<table *ngFor="let table of tableData" mat-table [dataSource]="table.data" class="table">
+
+  <ng-container matColumnDef="{{table.displayedColumns[0]}}">
+    <th mat-header-cell *matHeaderCellDef> {{ table.displayedColumns[0] }} </th>
+    <td mat-cell *matCellDef="let index = index"> {{table.data[index].feature}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="{{table.displayedColumns[1]}}">
+    <th mat-header-cell *matHeaderCellDef> {{ table.displayedColumns[1] }}</th>
+    <td mat-cell *matCellDef="let index = index">{{ table.data[index].value }}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="table.displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: table.displayedColumns;"></tr>
+
+</table>

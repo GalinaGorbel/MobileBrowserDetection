@@ -1,0 +1,11 @@
+<app-mat-table
+  [tableData]="[{displayedColumns: winDisplayedColumns, data: windowData}, {displayedColumns: cdkDisplayedColumns, data: cdkPlatformData}]"
+></app-mat-table>
+<h2>From the Window Interface</h2>
+Ширина {{ innerWidth }} и высота {{ innerHeight }} области просмотра
+<hr/>
+Ширина экрана {{ screenWidth }}
+<hr/>
+Область отвечающая за вывод информации: ширина {{ availWidth }}, высота {{ availHeight }}
+<hr/>
+PixelRatio: {{ pixelRatio }}
